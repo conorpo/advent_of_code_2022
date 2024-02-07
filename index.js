@@ -4,7 +4,7 @@ function hrtime_to_ms(hrtime) {
 }
 
 async function run_all_days() {
-    let results = [];
+    let results = [{}];
 
     for(let i = 1; i <= 25; i++) {
         try {

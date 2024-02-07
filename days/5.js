@@ -108,7 +108,7 @@ export async function part2() {
     return stacks.map(stack => stack.pop()).join("");
 }
 
-if(positionals.some(pos => pos.endsWith(`${DAY}.js`))) {
+if (import.meta.main) {
     console.log(await part1());
     console.log(await part2());
 }

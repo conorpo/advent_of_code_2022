@@ -60,7 +60,7 @@ export async function part2() {
     return top_3.reduce((a, b) => a + b);
 }
 
-if(positionals.some(pos => pos.endsWith(`${DAY}.js`))) {
+if (import.meta.main) {
     console.log(await part1());
     console.log(await part2());
 }
