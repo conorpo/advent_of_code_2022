@@ -81,6 +81,8 @@ export async function part1() {
 
 // Multiplies a scene score grid by the scene score for a given direction
 function scene_score_dir(grid, scene_score, checking_row, increasing) {
+    // Redoing this since the innermost function is a bit overly complicated and slow
+
     const h = grid.length;
     const w = grid[0].length;
 
@@ -88,7 +90,7 @@ function scene_score_dir(grid, scene_score, checking_row, increasing) {
     let minor_dim = checking_row ? w : h;
 
     for(let i = 0; i < major_dim; i++) {
-        let closest_tree = Array(10).fill(0); // Stores the distance from the edge of the closest tree at a each height
+        let closest_tree = Array(10).fill(0);
 
         for(let j = 0; j < minor_dim; j++) {
             let y = checking_row ? i : (increasing ? j : w - j - 1);
